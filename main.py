@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from display import *
 from draw import *
 
