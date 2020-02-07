@@ -107,6 +107,34 @@ c[GREEN] = 75;
 c[BLUE] = 0;
 draw_line(100, 0, 100, 105, s, c);
 
+def drawSpot(x0, y0, side, s, c):
+    draw_line(x0, y0, x0+side, y0, s, c);
+    draw_line(x0, y0, x0, y0+side, s, c);
+    draw_line(x0+side, y0, x0+side, y0+side, s, c);
+    draw_line(x0+side, y0+side, x0, y0+side, s, c);
+
+#spots
+drawSpot(210, 70, 10, s, c);
+drawSpot(230, 90, 10, s, c);
+drawSpot(213, 110, 10, s, c);
+drawSpot(222, 130, 10, s, c);
+drawSpot(233, 150, 10, s, c);
+drawSpot(211, 170, 10, s, c);
+drawSpot(228, 190, 10, s, c);
+drawSpot(214, 210, 10, s, c);
+drawSpot(231, 230, 10, s, c);
+drawSpot(225, 250, 10, s, c);
+drawSpot(213, 270, 10, s, c);
+drawSpot(234, 290, 10, s, c);
+drawSpot(216, 310, 10, s, c);
+drawSpot(226, 330, 10, s, c);
+drawSpot(250, 66, 10, s, c);
+drawSpot(270, 101, 10, s, c);
+drawSpot(290, 72, 10, s, c);
+drawSpot(310, 93, 10, s, c);
+drawSpot(330, 110, 10, s, c);
+drawSpot(330, 65, 10, s, c);
+
 
 
 display(s)
