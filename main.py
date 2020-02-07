@@ -59,6 +59,7 @@ draw_line(200, 350, 150, 300, s, c);
 draw_line(150, 300, 120, 330, s, c);
 draw_line(120, 330, 200, 410, s, c);
 draw_line(200, 410, 250, 410, s, c);
+draw_line(140, 310, 175, 345, s, c);
 
 #ears
 draw_line(238, 440, 250, 440, s, c);
@@ -87,6 +88,8 @@ draw_line(340, 1, 340, 50, s, c);
 draw_line(330, 1, 315, 1, s, c);
 draw_line(315, 1, 315, 10, s, c);
 draw_line(315, 10, 330, 10, s, c);
+draw_line(200, 6, 210, 6, s, c);
+draw_line(315, 6, 325, 6, s, c);
 
 #tail
 draw_line(350, 125, 370, 160, s, c);
