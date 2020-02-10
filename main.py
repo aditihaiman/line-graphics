@@ -191,8 +191,8 @@ c = [ 0, 255, 0 ]
 ##---------------------------OTHER STUFF---------------------------##
 
 for x in range(100):
-    x0 = x
-    y0 = x
+    x0 = int(math.log(x+1))
+    y0 = int(math.log(x+1))
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
@@ -201,8 +201,8 @@ for x in range(100):
 c = [ 0, 0, 255 ]
 
 for x in range(100):
-    x0 = 500-x
-    y0 = 500-x
+    x0 = 500-int(math.log(x+1))
+    y0 = 500-int(math.log(x+1))
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
@@ -211,8 +211,8 @@ for x in range(100):
 c = [ 255, 0, 0 ]
 
 for x in range(100):
-    x0 = 500-x
-    y0 = x
+    x0 = 500-int(math.log(x+1))
+    y0 = int(math.log(x+1))
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
@@ -221,8 +221,8 @@ for x in range(100):
 c = [ 255, 0, 0 ]
 
 for x in range(100):
-    x0 = x
-    y0 = 500-x
+    x0 = int(math.log(x+1))
+    y0 = 500-int(math.log(x+1))
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
