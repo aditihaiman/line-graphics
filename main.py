@@ -11,35 +11,35 @@ c = [ 0, 255, 0 ]
 ##-------------------------------TESTING------------------------------##
 
 
-##octants 1 and 5
-#draw_line(0, 0, XRES-1, YRES-1, s, c) #(0,0) - (499, 499)
-#draw_line(0, 0, XRES-1, YRES / 2, s, c) #(0,0) - (499, 250)
-#draw_line(XRES-1, YRES-1, 0, 250, s, c) #(499, 499) - (0, 250)
-#
-##octants 8 and 4
-#c[BLUE] = 255;
-#draw_line(0, YRES-1, XRES-1, 0, s, c); #(0, 499) - (499, 0)
-#draw_line(0, YRES-1, XRES-1, YRES/2, s, c); #(0, 499) - (499, 250)
-#draw_line(XRES-1, 0, 0, 250, s, c); #(499, 0) - (0, 250)
-#
-##octants 2 and 6
-#c[RED] = 255;
-#c[GREEN] = 0;
-#c[BLUE] = 0;
-#draw_line(0, 0, 250, YRES-1, s, c); #(0,0) - (250, 499)
-#draw_line(XRES-1, YRES-1, 250, 0, s, c); #(499,499) - (250, 0)
-#draw_line(250, 499, 499, 0, s, c);
-#
-##octants 7 and 3
-#c[BLUE] = 255;
-#draw_line(0, YRES-1, 250, 0, s, c); #(0, 499) - (250, 0)
-#draw_line(XRES-1, 0, 250, YRES-1, s, c); #(499, 0) - (250, 499)
-#
-##horizontal and vertical
-#c[BLUE] = 0;
-#c[GREEN] = 255;
-#draw_line(0, 250, 499, 250, s, c); #horizontal
-#draw_line(250, 0, 250, 499, s, c); #vertical
+#octants 1 and 5
+draw_line(0, 0, XRES-1, YRES-1, s, c) #(0,0) - (499, 499)
+draw_line(0, 0, XRES-1, YRES / 2, s, c) #(0,0) - (499, 250)
+draw_line(XRES-1, YRES-1, 0, 250, s, c) #(499, 499) - (0, 250)
+
+#octants 8 and 4
+c[BLUE] = 255;
+draw_line(0, YRES-1, XRES-1, 0, s, c); #(0, 499) - (499, 0)
+draw_line(0, YRES-1, XRES-1, YRES/2, s, c); #(0, 499) - (499, 250)
+draw_line(XRES-1, 0, 0, 250, s, c); #(499, 0) - (0, 250)
+
+#octants 2 and 6
+c[RED] = 255;
+c[GREEN] = 0;
+c[BLUE] = 0;
+draw_line(0, 0, 250, YRES-1, s, c); #(0,0) - (250, 499)
+draw_line(XRES-1, YRES-1, 250, 0, s, c); #(499,499) - (250, 0)
+draw_line(250, 499, 499, 0, s, c);
+
+#octants 7 and 3
+c[BLUE] = 255;
+draw_line(0, YRES-1, 250, 0, s, c); #(0, 499) - (250, 0)
+draw_line(XRES-1, 0, 250, YRES-1, s, c); #(499, 0) - (250, 499)
+
+#horizontal and vertical
+c[BLUE] = 0;
+c[GREEN] = 255;
+draw_line(0, 250, 499, 250, s, c); #horizontal
+draw_line(250, 0, 250, 499, s, c); #vertical
 
 ##-----------------------EL GIRAFFO---------------------------##
 
@@ -189,45 +189,45 @@ c = [ 0, 255, 0 ]
 #draw_line(110+300, 290+40, 110+300, 305+40, s, c);
 
 ##---------------------------OTHER STUFF---------------------------##
-
-for x in range(100):
-    x0 = int(math.log(x+1))
-    y0 = int(math.log(x+1))
-    x1 = abs(int(math.sin(x)*500))
-    y1 = abs(int(math.cos(x)*500))
-    draw_line(x0, y0, x1, y1, s, c);
-    c[2] += 2
-
-c = [ 0, 0, 255 ]
-
-for x in range(100):
-    x0 = 500-int(math.log(x+1))
-    y0 = 500-int(math.log(x+1))
-    x1 = abs(int(math.sin(x)*500))
-    y1 = abs(int(math.cos(x)*500))
-    draw_line(x0, y0, x1, y1, s, c);
-    c[0] += 2
-
-c = [ 255, 0, 0 ]
-
-for x in range(100):
-    x0 = 500-int(math.log(x+1))
-    y0 = int(math.log(x+1))
-    x1 = abs(int(math.sin(x)*500))
-    y1 = abs(int(math.cos(x)*500))
-    draw_line(x0, y0, x1, y1, s, c);
-    c[1] += 2
-
-c = [ 255, 0, 0 ]
-
-for x in range(100):
-    x0 = int(math.log(x+1))
-    y0 = 500-int(math.log(x+1))
-    x1 = abs(int(math.sin(x)*500))
-    y1 = abs(int(math.cos(x)*500))
-    draw_line(x0, y0, x1, y1, s, c);
-    c[1] += 2
-    
+#
+#for x in range(100):
+#    x0 = int(math.log(x+1))
+#    y0 = int(math.log(x+1))
+#    x1 = abs(int(math.sin(x)*500))
+#    y1 = abs(int(math.cos(x)*500))
+#    draw_line(x0, y0, x1, y1, s, c);
+#    c[2] += 2
+#
+#c = [ 0, 0, 255 ]
+#
+#for x in range(100):
+#    x0 = 500-int(math.log(x+1))
+#    y0 = 500-int(math.log(x+1))
+#    x1 = abs(int(math.sin(x)*500))
+#    y1 = abs(int(math.cos(x)*500))
+#    draw_line(x0, y0, x1, y1, s, c);
+#    c[0] += 2
+#
+#c = [ 255, 0, 0 ]
+#
+#for x in range(100):
+#    x0 = 500-int(math.log(x+1))
+#    y0 = int(math.log(x+1))
+#    x1 = abs(int(math.sin(x)*500))
+#    y1 = abs(int(math.cos(x)*500))
+#    draw_line(x0, y0, x1, y1, s, c);
+#    c[1] += 2
+#
+#c = [ 255, 0, 0 ]
+#
+#for x in range(100):
+#    x0 = int(math.log(x+1))
+#    y0 = 500-int(math.log(x+1))
+#    x1 = abs(int(math.sin(x)*500))
+#    y1 = abs(int(math.cos(x)*500))
+#    draw_line(x0, y0, x1, y1, s, c);
+#    c[1] += 2
+#
 
 
 display(s)
