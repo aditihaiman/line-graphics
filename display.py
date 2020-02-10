@@ -10,7 +10,7 @@ RED = 0
 GREEN = 1
 BLUE = 2
 
-DEFAULT_COLOR = [77, 134, 227]
+DEFAULT_COLOR = [0,0,0]#[77, 134, 227]
 
 def new_screen( width = XRES, height = YRES ):
     screen = []

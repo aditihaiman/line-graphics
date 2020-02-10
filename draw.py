@@ -9,7 +9,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         temp = y1
         y1 = y0
         y0 = temp
-    print(x0, y0, x1, y1)
+    #print(x0, y0, x1, y1)
     if(x1 == x0): slope = 5
     elif(y0 == y1): slope = 0
     else: slope = (y1-y0)/(x1-x0)
