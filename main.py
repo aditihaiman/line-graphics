@@ -7,6 +7,10 @@ import math
 s = new_screen()
 c = [ 0, 255, 0 ]
 
+
+##-------------------------------TESTING------------------------------##
+
+
 ##octants 1 and 5
 #draw_line(0, 0, XRES-1, YRES-1, s, c) #(0,0) - (499, 499)
 #draw_line(0, 0, XRES-1, YRES / 2, s, c) #(0,0) - (499, 250)
@@ -36,6 +40,9 @@ c = [ 0, 255, 0 ]
 #c[GREEN] = 255;
 #draw_line(0, 250, 499, 250, s, c); #horizontal
 #draw_line(250, 0, 250, 499, s, c); #vertical
+
+##-----------------------EL GIRAFFO---------------------------##
+
 #c[RED] = 255;
 #c[BLUE] = 0;
 #c[GREEN] = 255;
@@ -181,12 +188,15 @@ c = [ 0, 255, 0 ]
 #draw_line(135+300, 290+40, 110+300, 290+40, s, c);
 #draw_line(110+300, 290+40, 110+300, 305+40, s, c);
 
+##---------------------------OTHER STUFF---------------------------##
+
 for x in range(100):
     x0 = x
     y0 = x
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
+    c[2] += 2
 
 c = [ 0, 0, 255 ]
 
@@ -196,6 +206,7 @@ for x in range(100):
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
+    c[0] += 2
 
 c = [ 255, 0, 0 ]
 
@@ -205,6 +216,9 @@ for x in range(100):
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
+    c[1] += 2
+
+c = [ 255, 0, 0 ]
 
 for x in range(100):
     x0 = x
@@ -212,6 +226,7 @@ for x in range(100):
     x1 = abs(int(math.sin(x)*500))
     y1 = abs(int(math.cos(x)*500))
     draw_line(x0, y0, x1, y1, s, c);
+    c[1] += 2
     
 
 
